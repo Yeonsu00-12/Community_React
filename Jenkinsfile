@@ -1,6 +1,10 @@
 pipeline {
  agent any
 
+ tools {
+  nodejs "NodeJS_23"
+ }
+
  triggers {
   pollSCM('* * * * *')
  }
@@ -12,11 +16,17 @@ pipeline {
     url: 'https://github.com/Yeonsu00-12/Community_React.git'
    }
   }
-  stage('Build') {
+  stage('Install dependencies') {
    steps {
-    sh 'mvn clean pakeage'
+    sh 'npm ci'
    }
   }
+  stage('Build') {
+   steps {
+    sh 'npm run build'
+   }
+  }
+  
   stage('Deploy') {
    steps {
     deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://192.168.56.102:8080')], contextPath: null, war : 'target/hello-world.war'
