@@ -2,15 +2,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>maven-spring-hello-webapp</artifactId>
+  <artifactId>Community_React</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
-  <name>maven-spring-hello-webapp Maven Webapp</name>
+  <name>Community_React</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <spring.version>5.3.10</spring.version>
   </properties>
   <dependencies>
